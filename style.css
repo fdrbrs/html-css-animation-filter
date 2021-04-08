@@ -192,3 +192,66 @@
 }
 
 /* Esercizio 13 */
+
+.ex-13-button:hover > .ex-13-top-white {
+    animation: gira_right 2s linear;
+}
+
+.ex-13-button:hover > .ex-13-bottom-white {
+    animation: gira_left 2s linear;
+}
+
+@keyframes gira_right {
+    0%{
+        top: -10px;
+        left: 10%;
+    }
+    25%{
+        top: -10px;
+        left: 90%;
+    }
+    50%{top: 60px;
+        left: 90%;
+    }
+    75%{
+        top: 60px;
+        left: -10px;
+    }
+
+    90%{
+        left: -10px;
+        top: -10px
+    }
+    100%{
+        top: -10px;
+        left: 10%;
+    }
+}
+
+@keyframes gira_left {
+    0%{
+        bottom: -10px;
+        right: 20%;
+    }
+    25%{
+        bottom: -10px;
+        right: 90%;
+    }
+    50%{
+        bottom: 60px;
+        right: 90%
+    }
+    75%{
+        bottom: 60px;
+        right: -10px;
+    }
+
+    90%{
+        right: -10px;
+        bottom: -10px;
+    }
+    100%{
+        bottom: -10px;
+        right: 20%;
+    }
+}
