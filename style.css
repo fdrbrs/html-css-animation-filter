@@ -97,18 +97,54 @@
 
 }
 
-
+/* two filters, border-radius, transform: scale Esercizio 9*/
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: all 2s;
+    transition-timing-function: linear;
 }
+
+.ex-9-img:hover{
+    filter: sepia(0.9) grayscale(0.6);
+    border-radius: 4rem;
+    transform: scale(1.5);
+}
+
+/* Esercizio 10  animation e transform: rotate*/
+
 .ex-10-icon {
     font-size: 60px;
+    animation-name: gira;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+
+@keyframes gira {
+    50% {transform: rotate(-180deg);
+    }
+    100% {transform: rotate(-360deg)}
+}
+
+/* Esercizio 11  animation on hover transform rotate, animation-timing-transform*/
+
 .ex-11-icon {
     font-size: 60px;
+    animation: none;
 }
+
+.ex-11-icon:hover{
+    animation: girarotto 2s cubic-bezier(.53,-0.05,1,.58) infinite;
+}
+
+@keyframes girarotto {
+    75%{transform: rotate(270deg);}
+}
+
+/* Esercizio 12 */
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
