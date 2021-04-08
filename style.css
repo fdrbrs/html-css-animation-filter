@@ -132,18 +132,16 @@
 
 .ex-11-icon {
     font-size: 60px;
-    animation: none;
 }
 
 .ex-11-icon:hover{
-    animation: girarotto 2s cubic-bezier(.53,-0.05,1,.58) infinite;
+    animation: girarotto 2s cubic-bezier(.53,-0.05,1,.58) infinite none;
 }
 
 @keyframes girarotto {
     75%{transform: rotate(270deg);}
 }
 
-/* Esercizio 12 */
 
 .ex-12-button, .ex-13-button {
     position: relative;
@@ -174,3 +172,23 @@
     width: 60px;
     height: 20px;
 }
+
+/* Esercizio 12 */
+
+.ex-12-button:hover > .ex-12-top-white {
+    animation: slide_right 2s linear;
+}
+
+.ex-12-button:hover > .ex-12-bottom-white {
+    animation: slide_left 2s linear;
+}
+
+@keyframes slide_right {
+    50%{left: 65%}
+}
+
+@keyframes slide_left {
+    50%{right: 65%}
+}
+
+/* Esercizio 13 */
